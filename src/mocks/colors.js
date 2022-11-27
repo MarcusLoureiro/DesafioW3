@@ -10,6 +10,7 @@ const colors = {
     cor9: '#dfdede',
     cor10: '#ffb404',
     cor11: '#FFDA4F',
+    cor12: '#4188FF'
 }
 
 export default colors;

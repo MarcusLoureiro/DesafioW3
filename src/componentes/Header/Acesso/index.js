@@ -8,8 +8,8 @@ class Acesso extends React.Component {
         return (
             <>
                 <ButtonGroup gap='2'>
-                    <Button fontFamily='Exo' color={'white'} backgroundColor={'gray'} _hover={{ backgroundColor: colors.cor10 }}> Cadastre-se</Button>
-                    <Button fontFamily='Exo' color={'white'} backgroundColor={colors.cor10} _hover={{ backgroundColor: colors.cor10 }}> Entrar</Button>
+                    <Button fontFamily='Exo' color={'white'} backgroundColor={'gray'} _hover={{ backgroundColor: colors.cor10 }}>Criar Conta</Button>
+                    <Button fontFamily='Exo' color={'white'} backgroundColor={colors.cor10} _hover={{ backgroundColor: colors.cor10 }}> Acessar Conta</Button>
                 </ButtonGroup>
             </>
 

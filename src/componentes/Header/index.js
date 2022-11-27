@@ -10,7 +10,7 @@ import Acesso from '../Header/Acesso'
 class Homepage extends React.Component {
     render() {
         return (
-            <Flex minWidth='max-content' alignItems='center' gap='2' margin={5}>
+            <Flex minWidth='max-content' alignItems='center' gap='2'  marginRight={5} marginLeft={5} paddingTop={5}>
                 <Logo/>
                 <MenuHeader />
                 <Acesso />

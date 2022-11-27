@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import Home from './componentes/Home'
+import bg from './assets/fundo2.svg'
 import {
   ChakraProvider,
   Box,
@@ -22,7 +23,7 @@ function App() {
    }, []);
   return (
     <ChakraProvider theme={theme}>
-       <Home />
+        <Home />
     </ChakraProvider>
   );
 }
