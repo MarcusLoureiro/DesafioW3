@@ -13,12 +13,11 @@ import contaPoupanca from '../../assets/contaPoupanca.svg'
 import emprestimo from '../../assets/emprestimo.svg'
 import loja from '../../assets/loja.svg'
 import cartaoCredito from '../../assets/cartaoCredito.svg'
-import Footer from '../../assets/Footer.svg'
 
-import { Flex, Text, Box, Image, Spacer } from '@chakra-ui/react'
+import { Flex, Text, Box, Image, Spacer, Button } from '@chakra-ui/react'
 import Typewriter from "typewriter-effect";
 import Header from '../Header'
-import { viewCard, useViewCardCollapse } from '../CardItem'
+import { viewCard, useViewCardCollapse, itemContato } from '../CardItem'
 
 
 
@@ -244,12 +243,83 @@ export default function Homepage() {
                                 Abra já sua conta no Banco D3!`
                     )}
                 </Flex>
-                <Box 
-                h={windowSize.innerHeight * 0.3}
-                w={'100%'}
-                bgImage={`url(${Footer})`}>
-
-                </Box>
+                <Flex flex={1}
+                    w={'100%'}
+                    maxWidth={'100%'}
+                    bg={colors.cor10}
+                    flexDirection={'column'}
+                    justifyContent={'center'}
+                    alignItems={'center'}
+                    paddingRight={windowSize.innerWidth * 0.05}
+                    paddingLeft={windowSize.innerWidth * 0.05}
+                    paddingTop={windowSize.innerHeight * 0.025}
+                    paddingBottom={windowSize.innerHeight * 0.025}
+                    flexWrap='wrap'>
+                    <Box
+                        w={'100%'}
+                        justifyContent={'center'}>
+                        <Text
+                            w={'100%'}
+                            h={'100%'}
+                            fontFamily={'Exo'}
+                            fontWeight={'bold'}
+                            fontSize='25px'
+                            color={'white'}
+                            textAlign={'center'}
+                            paddingBottom={5}
+                            
+                        >
+                            Vem ser cliente D3.
+                            <br></br>
+                            Abra sua conta agora mesmo 100% online!
+                        </Text>
+                        
+                    </Box>
+                    <Button 
+                    fontFamily='Exo' 
+                    color={'black'} 
+                    backgroundColor={colors.cor13} 
+                    _hover={{ backgroundColor: colors.cor12, color:'white'}}
+                    >Criar Conta
+                    </Button>
+                </Flex>
+                <Flex flex={1}
+                    w={'100%'}
+                    maxWidth={'80%'}
+                    marginRight={windowSize.innerWidth * 0.05}
+                    marginLeft={windowSize.innerWidth * 0.05}
+                    marginTop={windowSize.innerHeight * 0.05}
+                    marginBottom={windowSize.innerHeight * 0.05}
+                    flexDirection={'row'}
+                    justifyContent={'center'}
+                    alignItems={'center'}
+                    flexWrap='wrap'>
+                    {itemContato(
+                        windowSize.innerWidth,
+                        windowSize.innerHeight,
+                        'Whatsapp',
+                        `91 9008 8009`
+                    )}
+                    {itemContato(
+                        windowSize.innerWidth,
+                        windowSize.innerHeight,
+                        'SAC',
+                        `0800 777 0799`
+                    )}
+                    {itemContato(
+                        windowSize.innerWidth,
+                        windowSize.innerHeight,
+                        'Ouvidoria Banco D3',
+                        `0800 444 0505`
+                    )}
+                    {itemContato(
+                        windowSize.innerWidth,
+                        windowSize.innerHeight,
+                        'Email',
+                        `atendimento@bancod3.com`
+                    )}
+                    
+                </Flex>
             </Box>
 
         </>

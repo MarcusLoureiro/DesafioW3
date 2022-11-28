@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDisclosure } from '@chakra-ui/react'
+import { color, useDisclosure } from '@chakra-ui/react'
 import colors from '../../mocks/colors'
 import { Flex, Text, Box, Image, Button } from '@chakra-ui/react'
 
@@ -87,7 +87,9 @@ export function useViewCardCollapse(w, h, imagem, titulo, texto) {
                 fontFamily={'Exo'}
                 fontWeight={'bold'}
                 fontSize='20px'
-                maxWidth={w * 0.5}
+                w={w * 0.3}
+                minWidth={w * 0.3}
+                maxWidth={w * 0.3}
                 padding={5}
                 color={colors.cor8}
                 {...disclosureProps}
@@ -97,6 +99,59 @@ export function useViewCardCollapse(w, h, imagem, titulo, texto) {
         </Flex>
     )
 }
+
+export function itemContato(w, h, titulo, texto) {
+ 
+    return (
+        <Flex flex={1}
+            w={'100%'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            margin={5}>
+            <Box 
+            bg={'white'} 
+            boxShadow={'lg'} 
+            paddingLeft={5}
+            paddingRight={5}
+            borderRadius={8}
+            minW={w*0.2}
+            maxW={w*0.3}>
+                <Text
+                    textAlign={'center'}
+                    fontFamily={'Exo'}
+                    fontWeight={'bold'}
+                    fontSize='20px'
+                    w={'100%'}
+                    maxWidth={w * 0.5}
+                    paddingTop={5}
+                    color={colors.cor12}>
+                    {titulo}
+                </Text>
+                <Text
+                    textAlign={'center'}
+                    fontFamily={'Exo'}
+                    fontWeight={'bold'}
+                    fontSize='20px'
+                    w={'100%'}
+                    padding={5}
+                    color={colors.cor5}>
+                    {texto}
+                </Text>
+            </Box>
+
+        </Flex>
+    )
+}
+
+
+
+
+
+
+
+
+
 
 
 

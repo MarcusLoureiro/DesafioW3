@@ -1,6 +1,10 @@
 import React, {useEffect} from 'react';
 import Home from './componentes/Home'
-import bg from './assets/fundo2.svg'
+import Cadastro from './componentes/Cadastro'
+import Login from './componentes/Login'
+import Dashboard from './componentes/Dashboard';
+
+
 import {
   ChakraProvider,
   Box,
@@ -23,7 +27,7 @@ function App() {
    }, []);
   return (
     <ChakraProvider theme={theme}>
-        <Home />
+        <Dashboard />
     </ChakraProvider>
   );
 }
