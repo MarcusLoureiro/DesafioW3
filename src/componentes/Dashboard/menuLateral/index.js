@@ -20,14 +20,17 @@ import {
 
 import { IoPawOutline } from 'react-icons/io5'
 import NavItem from './NavItem'
+import colors from '../../../mocks/colors'
 
 export default function Sidebar() {
     const [navSize, changeNavSize] = useState("large")
+  
     return (
         <Flex
             pos="sticky"
             left="5"
             h="95vh"
+            marginRight={16}
             marginTop="2.5vh"
             boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
             borderRadius={navSize == "small" ? "15px" : "30px"}
@@ -45,7 +48,7 @@ export default function Sidebar() {
                 <IconButton
                     background="none"
                     mt={5}
-                    _hover={{ background: 'none' }}
+                    _hover={{ background: colors.cor11 }}
                     icon={<FiMenu />}
                     onClick={() => {
                         if (navSize == "small")
@@ -54,11 +57,11 @@ export default function Sidebar() {
                             changeNavSize("small")
                     }}
                 />
-                <NavItem navSize={navSize} icon={FiHome} title="Inicio" description="Aqui você tem visualiza as principais informações da sua conta." />
-                <NavItem navSize={navSize} icon={BiTransfer} title="Transferências" description="Realize transferências para outroas contas do Banco D3."/>
-                <NavItem navSize={navSize} icon={FiFileText} title="Extrato" description="Veja suas transações de entrada e saída da sua conta."/>
-                <NavItem navSize={navSize} icon={FiGift} title="Gift Cards" description="Que tal comprar aquele gift card e curti música, filmes, jogos e muito mais?"/>
-                <NavItem navSize={navSize} icon={FiSettings} title="Configurações" description="Acesse e caso deseje, aletere suas configurações"/>
+                <NavItem navSize={navSize} icon={FiHome} title="Inicio" description="Aqui você tem visualiza as principais informações da sua conta." active={false}/>
+                <NavItem navSize={navSize} icon={BiTransfer} title="Transferência" description="Realize transferências para outroas contas do Banco D3."  active={false}/>
+                <NavItem navSize={navSize} icon={FiFileText} title="Extrato" description="Veja suas transações de entrada e saída da sua conta."  active={false} />
+                <NavItem navSize={navSize} icon={FiGift} title="Gift Cards" description="Que tal comprar aquele gift card e curti música, filmes, jogos e muito mais?"  active={false}/>
+                <NavItem navSize={navSize} icon={FiSettings} title="Configurações" description="Acesse e caso deseje, aletere suas configurações"  active={false}/>
             </Flex>
 
             <Flex

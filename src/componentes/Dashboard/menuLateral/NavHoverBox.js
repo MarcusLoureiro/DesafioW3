@@ -19,22 +19,22 @@ export default function NavHoverBox({ title, icon, description }) {
                 height={0}
                 borderTop="10px solid transparent"
                 borderBottom="10px solid transparent"
-                borderRight="10px solid #FFDA4F"
+                borderRight={`10px solid ${colors.cor10}`}
             />
             <Flex
-                h={200}
-                w={200}
+                h={"100%"}
+                w={"100%"}
                 flexDir="column"
                 alignItems="center"
                 justify="center"
-                backgroundColor={colors.cor11}
-                borderRadius="10px"
+                backgroundColor={colors.cor10}
+                borderRadius="8px"
                 color="#fff"
                 textAlign="center"
             >
                 <Icon as={icon} fontSize="3xl" mb={4} />
                 <Heading fontFamily={'Exo'} size="md" fontWeight="normal">{title}</Heading>
-                <Text fontFamily={'Exo'} >{description}</Text>
+                <Text padding={1} fontFamily={'Exo'} >{description}</Text>
             </Flex>
         </>
     )

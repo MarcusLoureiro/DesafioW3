@@ -1,7 +1,8 @@
 import React from 'react'
-import logo from '../../../assets/logo.svg'
-import { Flex, Spacer, Box, ButtonGroup, Heading, Button, Image, Menu, MenuList, MenuButton, MenuItem } from '@chakra-ui/react'
-import { ChevronDownIcon, ArrowForwardIcon } from '@chakra-ui/icons'
+import logo from '../../../../../assets/logo.svg'
+import textos from '../../../../../mocks/textos';
+import {Box, Heading, Image} from '@chakra-ui/react'
+
 
 class Logo extends React.Component {
     render() {
@@ -14,7 +15,7 @@ class Logo extends React.Component {
                     alignSelf='center'
                     paddingBottom={4} />
                 <Box paddingBottom={2} paddingStart={3}>
-                    <Heading size='md' fontFamily='Exo'>Banco D3</Heading>
+                    <Heading size='md' fontFamily='Exo'>{textos.nomeBanco}</Heading>
                 </Box>
             </>
                 
