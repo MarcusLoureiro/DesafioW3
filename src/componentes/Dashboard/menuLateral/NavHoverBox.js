@@ -19,18 +19,20 @@ export default function NavHoverBox({ title, icon, description }) {
                 height={0}
                 borderTop="10px solid transparent"
                 borderBottom="10px solid transparent"
-                borderRight={`10px solid ${colors.cor10}`}
+                borderRight={`10px solid ${colors.cor12}`}
             />
             <Flex
+               
                 h={"100%"}
                 w={"100%"}
                 flexDir="column"
                 alignItems="center"
                 justify="center"
-                backgroundColor={colors.cor10}
+                backgroundColor={colors.cor12}
                 borderRadius="8px"
                 color="#fff"
                 textAlign="center"
+                
             >
                 <Icon as={icon} fontSize="3xl" mb={4} />
                 <Heading fontFamily={'Exo'} size="md" fontWeight="normal">{title}</Heading>

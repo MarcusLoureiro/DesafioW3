@@ -13,8 +13,8 @@ import NavHoverBox from './NavHoverBox'
 import colors from '../../../mocks/colors'
 
 export default function NavItem({ icon, title, description, active, navSize }) {
-    const [activeStatus, changeActive] = useState(active)
-    const [activeBox, changeActiveBox] = useState(false)
+ 
+
 
     if (true) {
         return (
@@ -26,21 +26,19 @@ export default function NavItem({ icon, title, description, active, navSize }) {
             >
                 <Menu placement="right">
                     <Box
-                        backgroundColor={activeStatus && colors.cor11}
+                        backgroundColor={active && colors.cor11}
                         p={3}
                         borderRadius={4}
                         _hover={{ textDecor: 'none', backgroundColor: colors.cor11 }}
                         w={navSize == "large" && "100%"}
-                        onClick={() => {
-                            changeActive(!activeStatus)
-                        }}
+                    
 
 
                     >
-                        <MenuButton isActive={false} background={''} w="100%">
+                        <MenuButton isActive={active} background={''} w="100%">
                             <Flex>
-                                <Icon as={icon} fontSize="xl" color={activeStatus ? 'white' : "gray.500"} />
-                                <Text color={activeStatus ? 'white' : "gray.500"} fontFamily={'Exo'} ml={5} display={navSize == "small" ? "none" : "flex"}>{title}</Text>
+                                <Icon as={icon} fontSize="xl" color={active ? 'white' : "gray.500"} />
+                                <Text fontSize={'1rem'} color={active ? 'white' : "gray.500"} fontFamily={'Exo'} ml={5} display={navSize == "small" ? "none" : "flex"}>{title}</Text>
                             </Flex>
                         </MenuButton>
                     </Box>

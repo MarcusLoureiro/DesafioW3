@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import colors from '../../../mocks/colors'
 import { Flex, Text, Box, Button } from '@chakra-ui/react'
 import textos from '../../../mocks/textos';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -9,6 +10,7 @@ import textos from '../../../mocks/textos';
 
 export default function DestaqueSecao() {
 
+    let navigate = useNavigate()
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
     useEffect(() => {
@@ -66,6 +68,7 @@ export default function DestaqueSecao() {
                 color={'black'}
                 backgroundColor={colors.cor13}
                 _hover={{ backgroundColor: colors.cor12, color: 'white' }}
+                onClick={()=>{navigate('cadastro')}}
             >{textos.labelCriarConta}
             </Button>
         </Flex>

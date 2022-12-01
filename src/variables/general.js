@@ -379,7 +379,7 @@ export const olderTransactions = [
   {
     name: "Seguro BD3",
     date: "26 Novembro 2022, às 05:00 H",
-    price: "Pending",
+    price: "Pendente",
     logo: AiOutlineExclamation,
   },
   {

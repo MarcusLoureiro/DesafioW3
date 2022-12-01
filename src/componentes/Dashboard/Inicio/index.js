@@ -4,6 +4,7 @@ import React from "react";
 import { FaWallet } from "react-icons/fa";
 import { MdAttachMoney } from "react-icons/md";
 import { RiMastercardFill } from "react-icons/ri";
+import { useDispatch, useSelector } from 'react-redux';
 import {
   invoicesData,
   newestTransactions,
@@ -13,8 +14,16 @@ import CartaoCredito from "./components/CartaoCredito";
 import Fatura from "./components/Faturas";
 import CardSaldo from "./components/CardSaldo";
 import Transacoes from "./components/Transacoes";
+import formataValor from "../../../servicos/formataValor";
+import useUsuarioLogado from "../../../servicos/useUsuarioLogado";
 
-function Inicio() {
+
+
+
+export default function Inicio() {
+  const usuario = useUsuarioLogado();
+  console.log(usuario)
+
   return (
     <>
       <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
@@ -31,14 +40,14 @@ function Inicio() {
               <CartaoCredito
                 backgroundImage={BackgroundCard1}
                 title={"Banco D3"}
-                number={"7812 2139 0823 XXXX"}
+                number={``}
                 validity={{
                   name: "DATA VALIDADE",
-                  data: "05/24",
+                  data:usuario.cartaoCredito?.validade
                 }}
                 cvv={{
                   name: "CVV",
-                  code: "09x",
+                  code: usuario.cartaoCredito?.cvv
                 }}
                 icon={
                   <Icon
@@ -54,18 +63,19 @@ function Inicio() {
                 icon={<Icon h={"24px"} w={"24px"} color='white' as={FaWallet} />}
                 title={"Saldo + Cashback"}
                 description={"Saldo disponível"}
-                amount={2684.4}
+                amount={usuario.saldo}
               />
               <CardSaldo
                 icon={<Icon h={"32px"} w={"32px"} color='white' as={MdAttachMoney} />}
                 title={"Cashback"}
                 description={"Saldo apenas para Gift Cards"}
-                amount={45.84}
+                amount={0.00}
               />
             </Grid>
           </Box>
 
         </Grid>
+        {/*
         
           <Grid >
             <Fatura title={"Faturas"} data={invoicesData} />
@@ -89,7 +99,7 @@ function Inicio() {
           newestTransactions={newestTransactions}
           olderTransactions={olderTransactions}
         />
-
+              */}
       </Flex>
     </>
 
@@ -97,4 +107,4 @@ function Inicio() {
   );
 }
 
-export default Inicio;
+

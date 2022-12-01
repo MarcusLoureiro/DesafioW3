@@ -6,8 +6,10 @@ import MenuHeader from './Menu';
 import Acesso from './Acesso';
 
 
-class Homepage extends React.Component {
-    render() {
+
+
+export default function Header() {
+        
         return (
             <Flex minWidth='max-content' alignItems='center' gap='2'  marginRight={5} marginLeft={5} paddingTop={5}>
                 <Logo />
@@ -17,6 +19,5 @@ class Homepage extends React.Component {
 
         );
     }
-}
 
-export default Homepage
+

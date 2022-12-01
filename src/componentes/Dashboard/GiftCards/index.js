@@ -15,6 +15,8 @@ import steam from '../../../assets/giftCards/steam.png'
 import spotify from '../../../assets/giftCards/spotify.png'
 
 
+
+
 export default function GiftCards() {
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -52,47 +54,47 @@ export default function GiftCards() {
 
 
                 <CardGift {...{
-                    title: 'XBOX',
+                    title: 'Xbox',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: xbox
                 }} />
                 <CardGift {...{
-                    title: 'HBOMAX',
+                    title: 'Hbomax',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: habomax
                 }} />
                 <CardGift {...{
-                    title: 'NETFLIX',
+                    title: 'Netflix',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: netflix
                 }} />
                 <CardGift {...{
-                    title: 'DISNEY+',
+                    title: 'Disney+',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: disney
                 }} />
                 <CardGift {...{
-                    title: 'UBER',
+                    title: 'Uber',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: uber
                 }} />
                 <CardGift {...{
-                    title: 'IFOOD',
+                    title: 'Ifood',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: ifood
                 }} />
                 <CardGift {...{
-                    title: 'LEAGUE OF LEGENDS',
+                    title: 'League of Legends',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: lol
                 }} />
                 <CardGift {...{
-                    title: 'STEAM',
+                    title: 'Steam',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: steam
                 }} />
                 <CardGift {...{
-                    title: 'SPOTIFY',
+                    title: 'Spotify',
                     description: 'Compre agora mesmo e resgate em seu console. Créditos de 25, 50 ou 100 reais para usar em toda a loja Xbox',
                     imagem: spotify
                 }} />

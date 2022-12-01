@@ -13,6 +13,7 @@ const Extrato = ({
     olderTransactions,
 }) => {
     const textColor = useColorModeValue("gray.700", "white");
+    console.log(newestTransactions, olderTransactions)
 
     return (
         <Card w={'100%'} ms={{ lg: "24px" }} paddingRight={'16'} paddingTop={'12'}>
